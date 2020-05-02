@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/stylesheets/show.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="show-project"> <%= issue.project %></h1>
+        <p class="show-title">
+            Title: <%= issue.title %>
+        </p>
+        <p class="show-date"><%= issue.createdAt.toLocaleDateString('en-US') %></p>
+        <p class="show-description"><%= issue.description %></p>
+        <div class='show-buttons'>
+            <button class="all-issue-button" onclick="window.location.href='/'">All Issues</button>
+            <button class="edit-button" onclick="window.location.href='/issues/edit/<%= issue.id %>?_method=PUT'">Edit</button>
+    </div>
+    </div>
+    
+   
+</body>
+</html>

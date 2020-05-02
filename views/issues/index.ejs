@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/stylesheets/index.css">
+    <title>Article</title>
+</head>
+<body>
+<h1 class="home-page"> Issue Tracker <h1>
+    <div class="container">
+
+        <div class="new-issues">
+            <button class="new-issue-button" onclick="window.location.href='/issues/new'">New Issue</button>
+            
+        </div>
+    
+           <% issues.forEach(issue => { %>
+        <div class="issue-card">
+            <h1 class="issue-project"><%= issue.project %></h1>
+            <p class="issue-title"><%= issue.title %></p>
+            <p class="issue-date"> <%= issue.createdAt.toLocaleDateString('en-US')%></p>
+            <div class="issue-buttons">
+                <form action="/issues/<%= issue.id %>?_method=DELETE" method="POST">
+                <button class="delete-button">Delete</button>
+                </form>
+                <button class="read-more-button" onclick="window.location.href='issues/<%= issue.slug %>'">Read More</button>
+                <button class="edit-button" onclick="window.location.href='issues/edit/<%= issue.id %>?_method=PUT'">Edit</button>
+            </div>
+        </div>
+            
+            
+       <% }); %>
+        
+    </div>
+</body>
+</html>

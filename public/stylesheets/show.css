@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+:root {
+    --background-color: white ; 
+    --font-family: 'Nunito', sans-serif;
+    --margin: 70px;
+    --padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    
+}
+
+.show-project{
+    font-size: 35px;
+    text-align: left;
+    text-decoration: underline;
+}
+.show-title, .show-description, .show-date {
+    font-size: 25px;
+}
+
+.edit-button, .all-issue-button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #000;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 0 0 #000;
+    margin-left: 2rem;
+    transition: ease-out 0.15s;
+
+}
+.all-issue-button:hover, .all-issue-button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 #000;
+    transform: translate(4px, 4px);
+}
+.edit-button:hover, .edit:focus {
+    outline: 0;
+    box-shadow: 0 0 0 #000;
+    transform: translate(4px, 4px);
+}

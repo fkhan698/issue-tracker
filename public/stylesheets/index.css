@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+:root {
+    --background-color: white ; 
+    --font-family: 'Nunito', sans-serif;
+    --margin: 70px;
+    --padding: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+
+.home-page {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.new-issues {
+    text-align: center;
+}
+.new-issue-button {
+    background-color: ;
+    color:#2ed573;
+}
+
+.new-issue-button, 
+.read-more-button, 
+.edit-button, 
+.delete-button{
+    font: inherit;
+    background: none;
+    border:none;
+    cursor: pointer;
+    border: 2px solid #000;
+    background-color: #2ed573;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 0 0 #000;
+    transition: 0.15s ease;
+}
+.new-issue-button:hover, 
+.new-issue-button:focus{
+    outline: 0;
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+    
+    background-color: #6cf5a5;
+}
+.issue-card {
+    border-style: solid;
+    border-radius: 5px;
+    margin: 20px;
+    margin-top: 2rem;
+    padding: 2rem;
+    
+}
+.issue-project{
+    font-size: 50px;
+    
+}
+.issue-title, .issue-date {
+    margin-left: 2rem;
+    font-size: 30px;
+}
+.issue-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem;
+    font-family: var(--font-family);
+
+}
+
+.read-more-button, .edit-button {
+    font-family: var(--font-family);
+    margin-left: 3rem;
+    padding: 1rem;
+}
+.read-more-button {
+    background-color: #2ed573;
+    color: white;
+}
+.read-more-button:hover, 
+.read-more-button:focus{
+    outline: 0;
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+    background-color: #6cf5a5;
+}
+.edit-button{
+    background-color: #6f6df0;
+    color: white;
+}
+.edit-button:hover, 
+.edit-button:focus{
+    outline: 0;
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+    background-color: #b5b4ff;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    font-size: 21px;
+}
+.delete-button:hover, 
+.delete-button:focus {
+    outline: 0;
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+    background-color: #ff4b5b;
+}
+
+
+
